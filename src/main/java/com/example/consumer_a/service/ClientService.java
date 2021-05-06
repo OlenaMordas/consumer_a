@@ -4,15 +4,14 @@ import com.example.consumer_a.entity.Client;
 import com.example.consumer_a.repository.ClientRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ClientService {
 
     // json object mapper
