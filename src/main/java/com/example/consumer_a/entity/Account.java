@@ -5,9 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,12 +16,12 @@ import javax.persistence.Table;
 public class Account {
 
     @Id
-    private String client_id;
-    String account_nr;
+    private String account_nr;
+    String client_id;
     String account_type;
     String CCY;
     String IBAN;
-    int balance;
+    float balance;
 
 
 
