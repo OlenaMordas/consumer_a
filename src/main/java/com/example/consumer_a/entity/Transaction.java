@@ -20,11 +20,11 @@ public class Transaction {
 
     @Id
     String transaction_id;
-    String account_nr;
     String amount;
-    String IBAN;
+    String iban;
     Date value_date;
     String description;
+    int account_id;
 
 
 

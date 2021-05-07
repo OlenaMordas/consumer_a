@@ -19,8 +19,8 @@ public class Account {
     private String account_nr;
     String client_id;
     String account_type;
-    String CCY;
-    String IBAN;
+    String ccy;
+    String iban;
     float balance;
 
 

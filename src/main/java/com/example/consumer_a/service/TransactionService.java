@@ -4,6 +4,7 @@ import com.example.consumer_a.entity.Transaction;
 import com.example.consumer_a.repository.TransactionRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
 public class TransactionService {
 
     // json object mapper
-    Gson gson = new Gson();
+    Gson gson = new GsonBuilder().setDateFormat("yyyy-dd-MM HH:mm:ss").create();;
 
     final TransactionRepository transactionRepository;
 

@@ -22,13 +22,7 @@ public class EventsConsumer {
     private final AccountService accountService;
     private final TransactionService transactionService;
 
-    //reading the topic from the beginning
-    @KafkaListener(id = "receiver-api",
-            topicPartitions = {
-                    @TopicPartition(topic = "clients", partitionOffsets = @PartitionOffset(partition = "0", initialOffset = "0")),
-                    @TopicPartition(topic = "accounts", partitionOffsets = @PartitionOffset(partition = "0", initialOffset = "0"))
-                   // @TopicPartition(topic = "transactions", partitionOffsets = @PartitionOffset(partition = "0", initialOffset = "0")),
-                    })
+    @KafkaListener(topics = {"clients", "accounts", "transactions"})
     public void onMessage(ConsumerRecord<String, String> consumerRecord) throws JsonProcessingException {
         log.info("ConsumerRecord: {}", consumerRecord);
 
