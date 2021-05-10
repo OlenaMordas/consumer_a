@@ -19,9 +19,9 @@ public class Client {
 
     @Id
     private String client_id;
-    String FirstName;
-    String LastName;
-    String Ebanking_ID;
+    String first_name;
+    String last_name;
+    String ebanking_id;
 
 
 
